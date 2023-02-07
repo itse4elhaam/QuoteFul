@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+:root{
+    /* *Primary */
+
+    ---LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+
+    /* *Neutral */
+
+    ---GrayishBlue: hsl(217, 19%, 38%);
+    ---DarkGrayishBlue: hsl(217, 19%, 24%);
+    ---Darkgray: hsl(218, 23%, 16%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.gray{
+    background: var(---Darkgray);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background: var(---DarkGrayishBlue);
+    width: 35%;
+    height: 47%;
+    border-radius: 0.7rem;
+    box-shadow: 2px 2px 2px 5px var(---Darkgray);
+    gap: 0.3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AdviceCount, .Advice{
+    color: var(--NeonGreen);
+    font-size: 10px;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 5px;
+}
+
+.TheQuote{
+    color: var(---LightCyan);
+    width: auto;
+    font-size: 28px;
+    font-family: 'Manrope', sans-serif;
+    text-align: center;
+    padding: 2rem;
+    font-weight: 700;
+}
+
+.ender{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+}
+
+.lines{
+    display: flex;
+    gap: 8px;
+}
+
+.Line{
+    border-radius: 0.3rem;
+    background: var(---LightCyan);
+    height: 15px;
+    width: 6px;
+}
+
+.ender hr{
+    border: none;
+    color: var(---LightCyan);
+    height: 0px;
+    width: 35%;
+    border-bottom: 1px solid var(---LightCyan);
+    opacity: 0.2;
+}
+
+.dice{
+    color: var(---Darkgray);
+    height: 18px;
+}
+.dicebtn{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 2rem;
+    background: var(--NeonGreen);
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    border: none;
+}
+
+.dicebtn:hover{
+    box-shadow: 1px 1px 20px 1px var(--NeonGreen);
+
+}
+
+
+@media only screen and (max-width: 1000px){
+    .box{
+        width: 80%;
+        height: 50%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .box{
+        width: 90%;
+        height: 50%;
+    }
+}
