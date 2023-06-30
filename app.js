@@ -8,8 +8,8 @@ console.log(QuoteChanger);
 const apiUrl = "https://api.adviceslip.com/advice";
 const GetAdvice = async (url) => {
     try {
-        const responce = await fetch(url);
-        let data = await responce.json();
+        const res = await fetch(url);
+        let data = await res.json();
         let Slip = data.slip;
         console.log(Slip);
         let advice = data.slip.advice;
@@ -33,7 +33,9 @@ window.onload = async() => {
 };
 
 QuoteChanger.addEventListener('click', async() => {
+    quoteBox.textContent = "loading...";
     let Obj = await GetAdvice(apiUrl);
+    quoteBox.textContent = "";
     let QuoteInQuotes = document.querySelector('.QuoteInQuotes')
     // making the <q> in case it doesn't exist already
     if (QuoteInQuotes == null) {
@@ -45,9 +47,6 @@ QuoteChanger.addEventListener('click', async() => {
     AdviceCount.textContent = Obj.id;
 })
 
-// Animating using gsap:
-
-gsap.fromTo('.text', {opacity:0, y: 100}, {opacity:1, y:0, duration:1})
 
 
 
