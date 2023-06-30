@@ -28,7 +28,7 @@ header {
 }
 
 .name {
-	font-size: clamp(5rem, 13vw + 1rem, 7rem);
+	font-size: clamp(4rem, 12vw + 1rem, 7rem);
 	padding: 0.5rem;
 	color: white;
 	font-family: "Manrope", sans-serif;
@@ -82,7 +82,7 @@ header {
 .TheQuote {
 	color: var(---LightCyan);
 	width: auto;
-	font-size: 28px;
+	font-size: clamp(20px, 2.25vw ,28px);
 	font-family: "Manrope", sans-serif;
 	text-align: center;
 	padding: 2rem;
